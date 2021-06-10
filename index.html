@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="verposicao.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>MARCAÇÃO DE RESERVAS</h1>
+    <!-- escolha da planta -->
+    <fieldset>
+        <legend><strong> Escolha uma Planta </strong></legend>
+        <form>
+            <div>
+                <select id="planta" class="" onchange="atualizaImagem()">
+                    <option value="planta01.png">Planta 1</option>
+                    <option value="planta02.png">Planta 2</option>
+                    <option value="planta03.png">Planta 3</option>
+                    <option value="planta04.png">Planta 4</option>
+                </select>
+                <br>
+            </div>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend><strong> Entre com os dados da localização</strong></legend>
+        Digite um nome: <input id="nome" type="text" name="">
+    </fieldset>
+    <!-- fim escolha da planta -->
+
+    <!-- Marcar posições na planta -->
+    <fieldset>
+        <legend><strong>Marque as posições no Mapa</strong></legend>
+        <canvas id="myCanvas" width="600" height="350">
+        </canvas>
+    </fieldset>
+    <!-- Fim Marcar posições na planta -->
+
+    <!-- Mostra posições enquanto marca na planta -->
+    <fieldset>
+        <legend><strong>Posições em tempo real</strong></legend>
+        Posição X: <input id="posX" type="text" value="">
+        Posição Y: <input id="posY" type="text" value="">
+        <button id="apaga" onclick="desmarca()">Desmarcar última posição</button>
+    </fieldset>
+    <!-- Fim Mostra posições enquanto marca na planta -->
+
+    <!-- Mostra as reservas na planta com as coordenadas X e Y dentro do Canvas (com ol li) -->
+    <fieldset>
+        <legend><strong>Área para ver as Reservas</strong></legend>
+        <button id="ver_reservas" onclick="mostrar()">Ver Reservas</button>
+        Reserva para: <input id="dono" type="text" value="">
+        <p id="lugares"></p>
+        <ol id="myList">
+        </ol>
+
+    </fieldset>
+    <!-- Fim Mostra as reservas na planta com as coordenadas X e Y dentro do Canvas -->
+
+
+</body>
+
+</html>
