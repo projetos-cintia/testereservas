@@ -50,6 +50,8 @@ input {
     background-color: rgb(230, 112, 112);
     border: 2px solid var(--input-border);
     border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   fieldset{
